@@ -1,0 +1,183 @@
+wandb_version: 1
+
+weights:
+  desc: null
+  value: ''
+cfg:
+  desc: null
+  value: /home/xt/Desktop/yoloxt/9.20/cfg/deploy/yolov7.yaml
+data:
+  desc: null
+  value: /home/xt/Desktop/yoloxt/9.20/data/coco.yaml
+hyp:
+  desc: null
+  value:
+    lr0: 0.005
+    lrf: 0.2
+    momentum: 0.937
+    weight_decay: 0.0005
+    warmup_epochs: 3.0
+    warmup_momentum: 0.8
+    warmup_bias_lr: 0.1
+    box: 0.0894
+    cls: 0.251
+    cls_pw: 0.674
+    obj: 1.0
+    obj_pw: 0.8
+    iou_t: 0.2
+    anchor_t: 3.5
+    fl_gamma: 0.0
+    hsv_h: 0.0
+    hsv_s: 0.02
+    hsv_v: 0.01
+    degrees: 0.0
+    translate: 0.0
+    scale: 0.1
+    shear: 0.1
+    perspective: 1.0e-05
+    flipud: 0.01
+    fliplr: 0.01
+    mosaic: 0.0
+    mixup: 0.0
+    copy_paste: 0.0
+    paste_in: 0.0
+    loss_ota: 0
+    seg: 0.5
+    seg_weight1: 0.2
+seg_iou:
+  desc: null
+  value: 0.9
+epochs:
+  desc: null
+  value: 100
+batch_size:
+  desc: null
+  value: 4
+img_size:
+  desc: null
+  value:
+  - 640
+  - 640
+rect:
+  desc: null
+  value: false
+resume:
+  desc: null
+  value: false
+nosave:
+  desc: null
+  value: false
+notest:
+  desc: null
+  value: false
+noautoanchor:
+  desc: null
+  value: false
+evolve:
+  desc: null
+  value: false
+bucket:
+  desc: null
+  value: ''
+cache_images:
+  desc: null
+  value: false
+image_weights:
+  desc: null
+  value: false
+device:
+  desc: null
+  value: ''
+multi_scale:
+  desc: null
+  value: false
+single_cls:
+  desc: null
+  value: false
+adam:
+  desc: null
+  value: false
+sync_bn:
+  desc: null
+  value: false
+local_rank:
+  desc: null
+  value: -1
+workers:
+  desc: null
+  value: 8
+project:
+  desc: null
+  value: yolov7_out/train
+entity:
+  desc: null
+  value: null
+name:
+  desc: null
+  value: seg
+exist_ok:
+  desc: null
+  value: false
+quad:
+  desc: null
+  value: false
+linear_lr:
+  desc: null
+  value: false
+label_smoothing:
+  desc: null
+  value: 0.0
+upload_dataset:
+  desc: null
+  value: false
+bbox_interval:
+  desc: null
+  value: -1
+save_period:
+  desc: null
+  value: -1
+artifact_alias:
+  desc: null
+  value: latest
+freeze:
+  desc: null
+  value:
+  - 0
+v5_metric:
+  desc: null
+  value: false
+world_size:
+  desc: null
+  value: 1
+global_rank:
+  desc: null
+  value: -1
+save_dir:
+  desc: null
+  value: yolov7_out/train/seg3
+total_batch_size:
+  desc: null
+  value: 4
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.15.12
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1697794954.114198
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.10.12
+      5: 0.15.12
+      8:
+      - 5
+      13: linux-x86_64

@@ -1,0 +1,86 @@
+2023-10-20 17:42:34,114 INFO    StreamThr :453908 [internal.py:wandb_internal():86] W&B internal server running at pid: 453908, started at: 2023-10-20 17:42:34.114235
+2023-10-20 17:42:34,116 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: status
+2023-10-20 17:42:34,116 INFO    WriterThread:453908 [datastore.py:open_for_write():85] open: /home/xt/Desktop/yoloxt/9.20/wandb/run-20231020_174234-6n5xqumm/run-6n5xqumm.wandb
+2023-10-20 17:42:34,117 DEBUG   SenderThread:453908 [sender.py:send():380] send: header
+2023-10-20 17:42:34,117 DEBUG   SenderThread:453908 [sender.py:send():380] send: run
+2023-10-20 17:42:34,123 INFO    SenderThread:453908 [sender.py:_maybe_setup_resume():759] checking resume status for None/train/6n5xqumm
+2023-10-20 17:42:39,118 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:42:44,118 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:42:49,119 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:42:54,121 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:42:59,122 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:04,123 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:09,124 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:14,125 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:19,126 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:24,127 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:29,128 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:34,129 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:39,130 DEBUG   HandlerThread:453908 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-20 17:43:40,442 INFO    SenderThread:453908 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/ssl.py", line 1130, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/urllib3/connectionpool.py", line 357, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)
+2023-10-20 17:49:23,492 WARNING StreamThr :453908 [internal.py:is_dead():414] Internal process exiting, parent pid 453865 disappeared
+2023-10-20 17:49:23,492 ERROR   StreamThr :453908 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-10-20 17:49:24,194 INFO    HandlerThread:453908 [handler.py:finish():866] shutting down handler
+2023-10-20 17:49:24,194 INFO    WriterThread:453908 [datastore.py:close():294] close: /home/xt/Desktop/yoloxt/9.20/wandb/run-20231020_174234-6n5xqumm/run-6n5xqumm.wandb
+2023-10-20 17:49:24,194 INFO    MainThread:453908 [internal.py:handle_exit():76] Internal process exited

@@ -1,0 +1,140 @@
+wandb_version: 1
+
+learning_rate:
+  desc: null
+  value: 0.02
+momentum:
+  desc: null
+  value: 0.2
+architecture:
+  desc: null
+  value: --cfg
+dataset_id:
+  desc: null
+  value: --data
+infra:
+  desc: null
+  value: AWS
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.15.12
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1697796732.971552
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      - 80
+      3:
+      - 15
+      - 16
+      - 19
+      - 23
+      4: 3.10.12
+      5: 0.15.12
+      8:
+      - 5
+      13: linux-x86_64
+opt:
+  desc: null
+  value:
+    weights: ''
+    cfg: /home/xt/Desktop/yoloxt/9.20/cfg/deploy/yolov7.yaml
+    data: /home/xt/Desktop/yoloxt/9.20/data/coco.yaml
+    hyp:
+      lr0: 0.005
+      lrf: 0.2
+      momentum: 0.937
+      weight_decay: 0.0005
+      warmup_epochs: 3.0
+      warmup_momentum: 0.8
+      warmup_bias_lr: 0.1
+      box: 0.0894
+      cls: 0.251
+      cls_pw: 0.674
+      obj: 1.0
+      obj_pw: 0.8
+      iou_t: 0.2
+      anchor_t: 3.5
+      fl_gamma: 0.0
+      hsv_h: 0.0
+      hsv_s: 0.02
+      hsv_v: 0.01
+      degrees: 0.0
+      translate: 0.0
+      scale: 0.1
+      shear: 0.1
+      perspective: 1.0e-05
+      flipud: 0.01
+      fliplr: 0.01
+      mosaic: 0.0
+      mixup: 0.0
+      copy_paste: 0.0
+      paste_in: 0.0
+      loss_ota: 0
+      seg: 0.5
+      seg_weight1: 0.2
+    seg_iou: 0.9
+    epochs: 100
+    batch_size: 4
+    img_size:
+    - 640
+    - 640
+    rect: false
+    resume: false
+    nosave: false
+    notest: false
+    noautoanchor: false
+    evolve: false
+    bucket: ''
+    cache_images: false
+    image_weights: false
+    device: ''
+    multi_scale: false
+    single_cls: false
+    adam: false
+    sync_bn: false
+    local_rank: -1
+    workers: 8
+    project: yolov7_out/train
+    entity: null
+    name: seg
+    exist_ok: false
+    quad: false
+    linear_lr: false
+    label_smoothing: 0.0
+    upload_dataset: false
+    bbox_interval: -1
+    save_period: -1
+    artifact_alias: latest
+    freeze:
+    - 0
+    v5_metric: false
+    world_size: 1
+    global_rank: -1
+    save_dir: yolov7_out/train/seg3
+    total_batch_size: 4
+data_dict:
+  desc: null
+  value:
+    train: /home/xt/Desktop/yoloxt/9.20/data/dataSets/images/train
+    val: /home/xt/Desktop/yoloxt/9.20/data/dataSets/images/val
+    nc: 6
+    names:
+      '0': '0'
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      '4': '4'
+      '5': '5'

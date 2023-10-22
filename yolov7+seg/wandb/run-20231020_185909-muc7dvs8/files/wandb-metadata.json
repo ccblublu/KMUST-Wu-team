@@ -1,0 +1,82 @@
+{
+    "os": "Linux-5.19.0-46-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-10-20T10:59:13.702194",
+    "startedAt": "2023-10-20T10:59:09.319080",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/xt/Desktop/yoloxt/9.20/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "host": "xt",
+    "username": "xt",
+    "executable": "/home/xt/anaconda3/envs/xutao/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 4697.6632500000005,
+        "min": 800.0,
+        "max": 4900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4642.881,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 4614.93,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 4604.212,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 4609.269,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 4621.568,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 4610.374,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 4600.053,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 4606.575,
+            "min": 800.0,
+            "max": 4900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 937.3305015563965,
+            "used": 604.7819595336914
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2070",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2070",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 31.2711181640625
+    }
+}

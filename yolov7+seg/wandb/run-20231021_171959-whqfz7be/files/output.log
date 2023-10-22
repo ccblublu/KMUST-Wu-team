@@ -1,0 +1,137 @@
+                 from  n    params  module                                  arguments
+  0                -1  1       464  models.common.Conv                      [3, 16, 3, 1]
+  1                -1  1      2336  models.common.Conv                      [16, 16, 3, 2]
+  2                -1  1      2336  models.common.Conv                      [16, 16, 3, 1]
+  3                -1  1      9344  models.common.Conv                      [16, 64, 3, 2]
+  4                -1  1     16896  models.common.Conv                      [64, 256, 1, 1]
+  5                -2  1     16896  models.common.Conv                      [64, 256, 1, 1]
+  6                -1  1    295168  models.common.Conv                      [256, 128, 3, 1]
+  7                -1  1    295424  models.common.Conv                      [128, 256, 3, 1]
+  8                -1  1    295168  models.common.Conv                      [256, 128, 3, 1]
+  9                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 10[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]
+ 11                -1  1    295424  models.common.Conv                      [1152, 256, 1, 1]
+ 12                -1  1         0  models.common.MP                        []
+ 13                -1  1     16512  models.common.Conv                      [256, 64, 1, 1]
+ 14                -3  1     16512  models.common.Conv                      [256, 64, 1, 1]
+ 15                -1  1     36992  models.common.Conv                      [64, 64, 3, 2]
+ 16          [-1, -3]  1         0  models.common.Concat                    [1]
+ 17                -1  1      8320  models.common.Conv                      [128, 64, 1, 1]
+ 18                -2  1      8320  models.common.Conv                      [128, 64, 1, 1]
+ 19                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]
+ 20                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]
+ 21                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]
+ 22                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]
+ 23  [-1, -3, -5, -6]  1         0  models.common.Concat                    [1]
+ 24                -1  1     66048  models.common.Conv                      [256, 256, 1, 1]
+ 25                -1  1         0  models.common.MP                        []
+ 26                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 27                -3  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 28                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 29          [-1, -3]  1         0  models.common.Concat                    [1]
+ 30                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 31                -2  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 32                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 33                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 34                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 35                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 36  [-1, -3, -5, -6]  1         0  models.common.Concat                    [1]
+ 37                -1  1    263168  models.common.Conv                      [512, 512, 1, 1]
+ 38                -1  1         0  models.common.MP                        []
+ 39                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 40                -3  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 41                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 42          [-1, -3]  1         0  models.common.Concat                    [1]
+ 43                -1  1     65792  models.common.Conv                      [512, 128, 1, 1]
+ 44                -2  1     65792  models.common.Conv                      [512, 128, 1, 1]
+ 45                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 46                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 47                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 48                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 49  [-1, -3, -5, -6]  1         0  models.common.Concat                    [1]
+ 50                -1  1    263168  models.common.Conv                      [512, 512, 1, 1]
+ 51                -1  1   7085056  models.common.SPPCSPC                   [512, 512, 1]
+ 52                -1  1     65792  models.common.Conv                      [512, 128, 1, 1]
+ 53                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 54                37  1    133120  models.common.Conv_ATT                  [512, 128, 1, 1]
+ 55          [-1, -2]  1         0  models.common.Concat                    [1]
+ 56                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 57                -2  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 58                -1  1     73856  models.common.Conv                      [128, 64, 3, 1]
+ 59                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]
+ 60                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]
+ 61                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]
+ 62[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]
+ 63                -1  1     65792  models.common.Conv                      [512, 128, 1, 1]
+ 64                -1  1      8320  models.common.Conv                      [128, 64, 1, 1]
+ 65                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 66                24  1     33792  models.common.Conv_ATT                  [256, 64, 1, 1]
+ 67          [-1, -2]  1         0  models.common.Concat                    [1]
+ 68                -1  1      8320  models.common.Conv                      [128, 64, 1, 1]
+ 69                -2  1      8320  models.common.Conv                      [128, 64, 1, 1]
+ 70                -1  1     18496  models.common.Conv                      [64, 32, 3, 1]
+ 71                -1  1      9280  models.common.Conv                      [32, 32, 3, 1]
+ 72                -1  1      9280  models.common.Conv                      [32, 32, 3, 1]
+ 73                -1  1      9280  models.common.Conv                      [32, 32, 3, 1]
+ 74[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]
+ 75                -1  1     16512  models.common.Conv                      [256, 64, 1, 1]
+ 76                -1  1         0  models.common.MP                        []
+ 77                -1  1      8448  models.common.Conv                      [64, 128, 1, 1]
+ 78                -3  1      8448  models.common.Conv                      [64, 128, 1, 1]
+ 79                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 80      [-1, -3, 63]  1         0  models.common.Concat                    [1]
+ 81                -1  1     98816  models.common.Conv                      [384, 256, 1, 1]
+ 82                -2  1     98816  models.common.Conv                      [384, 256, 1, 1]
+ 83                -1  1    295168  models.common.Conv                      [256, 128, 3, 1]
+ 84                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 85                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 86                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]
+ 87[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]
+ 88                -1  1    262656  models.common.Conv                      [1024, 256, 1, 1]
+ 89                75  1     82432  models.common.RepConv                   [64, 128, 3, 1]
+ 90                88  1   1312768  models.common.RepConv                   [256, 512, 3, 1]
+ 91          [89, 90]  1     21186  models.yolo.Detect                      [6, [[10, 13, 16, 30, 332, 23], [36, 75, 76, 55, 72, 146]], [128, 512]]
+ 92                50  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 93                -1  1    590080  models.common.Conv                      [512, 128, 3, 1]
+ 94                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 95                -1  1     73856  models.common.Conv                      [128, 64, 3, 1]
+ 96                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 97                -1  1     18496  models.common.Conv                      [64, 32, 3, 1]
+ 98                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 99                -1  1      4640  models.common.Conv                      [32, 16, 3, 1]
+100                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+101                -1  1       400  models.common.C3                        [16, 8, 1, False]
+102                -1  1        74  models.common.Conv                      [8, 1, 3, 1]
+/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /opt/conda/conda-bld/pytorch_1682343995026/work/aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Model Summary: 424 layers, 15840140 parameters, 15840140 gradients, 108.6 GFLOPS
+Scaled weight_decay = 0.0005
+Optimizer groups: 98 .bias, 98 conv.weight, 90 other
+[34m[1mtrain: [39m[22mScanning '/home/xt/Desktop/yoloxt/9.20/data/dataSets/labels/train' images and labels... 1209 found, 11 missing, 0 empty, 0 corrupted: 100%|█| 1220/1220 [00:00<00:00, 473
+[34m[1mtrain: [39m[22mNew cache created: /home/xt/Desktop/yoloxt/9.20/data/dataSets/labels/train.cache
+[34m[1mval: [39m[22mScanning '/home/xt/Desktop/yoloxt/9.20/data/dataSets/labels/val' images and labels... 522 found, 0 missing, 0 empty, 0 corrupted: 100%|█| 522/522 [00:00<00:00, 4203.92it/s
+[34m[1mval: [39m[22mNew cache created: /home/xt/Desktop/yoloxt/9.20/data/dataSets/labels/val.cache
+[34m[1mautoanchor: [39m[22mEvolving anchors with Genetic Algorithm: fitness = 0.8425: 100%|██████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 1414.55it/s]
+Image sizes 640 train, 640 test
+Using 4 dataloader workers
+Logging results to yolov7_out/train/seg7
+Starting training for 100 epochs...
+     Epoch   gpu_mem       box       obj       cls       seg    labels  img_size
+      0/99     5.35G    0.1646   0.08381    0.0215   0.02368        66       640:   2%|▏         | 5/305 [00:05<02:51,  1.75it/s]
+[34m[1mautoanchor: [39m[22mAnalyzing anchors... anchors/target = 2.80, Best Possible Recall (BPR) = 0.9380. Attempting to improve anchors, please wait...
+[34m[1mautoanchor: [39m[22mWARNING: Extremely small objects found. 250 of 12636 labels are < 3 pixels in size.
+[34m[1mautoanchor: [39m[22mRunning kmeans for 6 anchors on 12636 points...
+[34m[1mautoanchor: [39m[22mthr=0.29: 0.9721 best possible recall, 3.97 anchors past thr
+[34m[1mautoanchor: [39m[22mn=6, img_size=640, metric_all=0.513/0.845-mean/best, past_thr=0.677-mean: 68,13,  18,66,  50,55,  76,40,  70,68,  83,78
+[34m[1mautoanchor: [39m[22mthr=0.29: 0.9729 best possible recall, 3.97 anchors past thr
+[34m[1mautoanchor: [39m[22mn=6, img_size=640, metric_all=0.510/0.847-mean/best, past_thr=0.675-mean: 64,12,  18,67,  74,36,  53,53,  70,67,  81,77
+      0/99     5.35G    0.1554   0.09878   0.02101   0.02537        53       640:   5%|▌         | 16/305 [00:07<00:58,  4.91it/s]
+    data = [self.dataset[idx] for idx in possibly_batched_index]    45       640:   7%|▋         | 22/305 [00:08<01:51,  2.54it/s]
+  File "/home/xt/anaconda3/envs/xutao/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/xt/Desktop/yoloxt/9.20/utils/datasets.py", line 773, in __getitem__
+    mask, img, (h0, w0), (h, w), labels = load_image(self, index)
+  File "/home/xt/Desktop/yoloxt/9.20/utils/datasets.py", line 905, in load_image
+    assert mask is not None, f'Image Not Found {path_img}'
+AssertionError: Image Not Found /home/xt/Desktop/yoloxt/9.20/data/dataSets/images/train/14225_gs_ori_43_142.jpg
+    data = [self.dataset[idx] for idx in possibly_batched_index]    45       640:   7%|▋         | 22/305 [00:08<01:51,  2.54it/s]
