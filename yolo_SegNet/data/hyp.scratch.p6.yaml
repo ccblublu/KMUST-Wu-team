@@ -1,0 +1,69 @@
+lr0: 0.015 # initial learning rate (SGD=1E-2, Adam=1E-3)                          初始学习率    0.015
+lrf: 0.4 # final OneCycleLR learning rate (lr0 * lrf)                            最终学习率    0
+momentum: 0.937  # SGD momentum/Adam beta1                                    SGD动量/Adam beta1
+weight_decay: 0.0005  # optimizer weight decay 5e-4                           optimizer权重衰减系数5e-4
+warmup_epochs: 3.0  # warmup epochs (fractions ok)                             前3个epoch进行warmup
+warmup_momentum: 0.8  # warmup initial momentum                                warmup初始化动量
+warmup_bias_lr: 0.1  # warmup initial bias lr                                  warmup初始bias学习率
+box: 0.05   # box loss gain                                                      box iou损失系数
+cls: 0.3  # cls loss gain                                                      cls分类损失系数
+cls_pw: 1.0  # cls BCELoss positive_weight                                     cls BCEloss正样本权重
+obj: 0.7 # obj loss gain (scale with pixels)                                  obj损失增益（按像素缩放） 
+obj_pw: 1.0  # obj BCELoss positive_weight                                     obj BCEloss正样本权重
+iou_t: 0.20  # IoU training threshold                                            IoU训练阈值      
+anchor_t: 4.0  # anchor-multiple threshold                                       锚定多重阈值 
+# anchors: 3  # anchors per output layer (0 to ignore)                           每个输出层的锚点（0到忽略） 
+fl_gamma: 0.0  # focal loss gamma (efficientDet default gamma=1.5)              焦点损失gamma（efficientDet默认gamma=1.5）   
+hsv_h: 0.7  # image HSV-Hue augmentation (fraction)                          hsv增强系数  色调
+hsv_s: 0.4  # image HSV-Saturation augmentation (fraction)                     hsv增强系数   饱和度
+hsv_v: 0.15  # image HSV-Value augmentation (fraction)                           hsv增强系数  亮度
+degrees: 25  # image rotation (+/- deg)                                      random_perspective增强系数   旋转角度
+translate: 0.0  # image translation (+/- fraction)                           random_perspective增强系数  平移
+scale: 0.1  # image scale (+/- gain)                                        random_perspective增强系数   图像缩放
+shear: 0.1  # image shear (+/- deg)                                         random_perspective增强系数   图像裁减
+perspective: 0.00001  # image perspective (+/- fraction), range 0-0.001        random_perspective增强系数   透明度
+flipud: 0.4 # image flip up-down (probability)                   上下反转数据增强
+fliplr: 0.4  # image flip left-right (probability)                左右反转数据增强
+mosaic: 1.0  # image mosaic (probability)                         mosaic数据增强
+mixup: 0.0  # image mixup (probability)                           mixup数据增强
+copy_paste: 0.0  # image copy paste (probability)                                图像复制粘贴（概率） 
+paste_in: 0.0  # image copy paste (probability), use 0 for faster training     图像复制粘贴（概率），使用0进行更快的训练 
+loss_ota: 0 # use ComputeLossOTA, use 0 for faster training                     使用ComputeLossTA，使用0进行更快的训练
+seg: 0.0
+seg_weight1: 1.0
+seg_weight2: 1.0
+# lr0: 0.015
+# lrf: 0.2
+# momentum: 0.937
+# weight_decay: 0.0005
+# warmup_epochs: 3.0
+# warmup_momentum: 0.8
+# warmup_bias_lr: 0.1
+# box: 0.1
+# cls: 0.5
+# cls_pw: 1.0
+# obj: 1.0
+# obj_pw: 1.0
+# iou_t: 0.2
+# anchor_t: 4.0
+# fl_gamma: 0.0
+# hsv_h: 0.015
+# hsv_s: 0.7
+# hsv_v: 0.4
+# degrees: 0.0
+# translate: 0.2
+# scale: 0.5
+# shear: 0.0
+# perspective: 0.0
+# flipud: 0.0
+# fliplr: 0.5
+# mosaic: 1.0
+# mixup: 0.0
+# copy_paste: 0.0
+# paste_in: 0.15
+# loss_ota: 0
+# seg: 0.1
+# seg_weight1: 1.0
+# seg_weight2: 1.0
+
+
