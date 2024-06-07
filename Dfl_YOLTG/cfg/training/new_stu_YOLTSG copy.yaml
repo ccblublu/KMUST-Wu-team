@@ -1,0 +1,53 @@
+# parameters
+nc: 6  # number of classes
+depth_multiple: 1.0  # model depth multiple
+width_multiple: 1.0  # layer channel multiple
+
+# anchors
+anchors:
+  - [10,13, 16,30, 332,23]  # P3/8
+  - [36,75, 76,55, 72,146]  # P4/16
+
+# yolov7 backbone
+backbone:
+  # [from, number, module, args]
+  [
+   [-1,1, repvit_m1_0,[]],
+  ]
+
+# yolov7 head
+head:
+  [   
+   [-1, 1, SPPELAN, [512,256]],   # 12
+
+   [-1, 1, nn.Upsample, [None, 2, 'nearest']],  #40
+
+   [-1, 1, RepNCSPELAN4, [256, 128, 256, 1]],  # 15
+
+   [[-1, 4], 1, Concat, [1]],  # cat backbone P3 
+   [-1, 1, nn.Upsample, [None, 2, 'nearest']],   #80
+   [-1, 1, RepNCSPELAN4, [128, 64, 128, 1]],  # 16 (P3/8-small)
+
+   [-1, 1, Conv, [256, 3, 2]],    #40
+   [[-1, 8], 1, Concat, [1]],  # cat head P4
+
+   [-1, 1, RepNCSPELAN4, [256, 128, 256, 1]],  # 19 (P4/16-medium)
+
+
+   [[7,10], 1, Detect, [nc, anchors]],   # Detect(P3, P4, P5 ）      20  
+  ]
+
+#-----------分割头------------#
+rustseg:
+  [[10, 1, nn.Upsample, [None, 2, 'nearest']],            #21    原本是50层     #80                        #93
+   [-1, 1, Conv, [64,3,1]],                        #22
+   [-1, 1, nn.Upsample, [None, 2, 'nearest']],       #23         #320
+   [-1, 1, Conv, [32, 3, 1]],                       #24
+   [-1, 1, nn.Upsample, [None, 2, 'nearest']],         #25      #640
+   [-1, 1, Conv, [16, 3,1]],                           #26
+   [-1, 1, nn.Upsample, [None, 2, 'nearest']],            
+   [-1, 1, Conv, [16, 3,1]],
+   [-1, 1, Conv, [128, 3, 1]],                        #27
+   [-1,1,C3,[8,False]],                         #28
+   [-1, 1,Conv, [2,3,1]],                           #29       
+  ]
