@@ -1,3 +1,3 @@
-#This is the code of paper YOLORS
-#Highlight: parsing branch with strip pooling
-            detection branch with og-mosaic
+Code of paper YOLORS
+Highlight: 1. parsing branch with strip pooling
+           2. detection branch with og-mosaic
