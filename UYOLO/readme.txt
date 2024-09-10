@@ -1,5 +1,5 @@
-#This is the code of paper UYOLO
-#Highlights: cascade parsing branch
-             detect branch with MPDIoU
-             PSH evaluation method
-#Many block have collected in models/common.py
+#  code of paper UYOLO
+## Highlights: 1. cascade parsing branch
+              2. detect branch with MPDIoU
+              3. PSH evaluation method
+## Many block have collected in models/common.py
