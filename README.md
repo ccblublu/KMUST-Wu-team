@@ -4,11 +4,11 @@
 1. Parsing Branch
 2. OG-Mosaic
 3. Strip pooling
-## Code of paper UYOLO
+## Code of UYOLO
 1. U-shape cascade
 2. MPDIoU
 3. PSH evaulation method
-## Code of paper HSSA
+## Code of HSSA
 1. SSM-based backbone
 2. MHTIoU
 3. Low GFlops
